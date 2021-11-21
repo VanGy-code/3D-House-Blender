@@ -133,6 +133,6 @@ dmypy.json
 .idea/
 
 # nodejs
-node-module/
+node_modules/
 
 addons/
