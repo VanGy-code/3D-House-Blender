@@ -46,3 +46,9 @@ Input `Ctrl + Shift + P` Or `F1` From keyboard, Select
 
 - `Blender: run Script`
 
+## Render Scene to Image
+
+- [ ] Set Light
+- [ ] Set Camera
+- [ ] Render Scene to Image
+
