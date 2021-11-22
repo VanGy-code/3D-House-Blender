@@ -1,7 +1,7 @@
 const obj2gltf = require("obj2gltf");
 const fs = require("fs");
 const data_dir = 'C:/Project/Datasets/3D-FRONT/';
-const house_id = '00c0c75e-1c12-46b3-9fc8-0561b1b1b510';
+const house_id = 'c9297532-14a7-4736-a0f4-1f14a527e93d';
 
 const house_config = JSON.parse(fs.readFileSync( data_dir + 'house/' + house_id + '/house.json'));
 const dir = './scenes/' + house_id + '/';
