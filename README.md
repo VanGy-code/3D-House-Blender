@@ -27,8 +27,11 @@ The Format of Dataset should be like this:
   -  `data_dir` : the `Root`
   - `house_id`: the Id of house
   - `dir`: Glft model's save path, default `./scene`
+  
 - Start a Terminal and change directory to Project root
   - Input `node run glfthouse.js`
+  
+    > `glfthouse.js` is modified from [Shao-Kui/SUNCG-Visulization-Using-Three.js: Visulize SUNCG dataset using three.js (github.com)](https://github.com/Shao-Kui/SUNCG-Visulization-Using-Three.js)
 
 ## Blender with VsCode
 

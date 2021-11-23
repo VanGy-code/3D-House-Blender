@@ -1,9 +1,10 @@
 const obj2gltf = require("obj2gltf");
 const fs = require("fs");
 const data_dir = 'C:/Project/Datasets/3D-FRONT/';
-const house_id = 'c9297532-14a7-4736-a0f4-1f14a527e93d';
+const house_id = '0f2bcc07-85c2-41a1-8712-cee71117aff6';
 
-const house_config = JSON.parse(fs.readFileSync( data_dir + 'house/' + house_id + '/house.json'));
+const house_info = fs.readFileSync( data_dir + 'house/' + house_id + '/house.json', 'utf8').replace(/\bNaN\b/g, "null")
+const house_config = JSON.parse(house_info);
 const dir = './scenes/' + house_id + '/';
 
 if(!fs.existsSync(dir)){
@@ -22,23 +23,6 @@ let obj_to_gltf = function(obj_path, gltf_path){
             fs.writeFileSync(gltf_path, data);
         });
 };
-
-let copy_obj =  function(save_path, path){
-    let obj_path = path + '.obj';
-    let mtl_path = path + '.mtl'
-    let obj_save_path = save_path + '.obj';
-    let mtl_save_path = save_path + '.mtl';
-    if(!fs.existsSync(obj_path)){
-        console.log(obj_path + ': does not exist! ');
-        return
-    }
-    fs.writeFileSync(obj_save_path, fs.readFileSync(obj_path));
-    if(!fs.existsSync(mtl_path)){
-        console.log(mtl_path + ': does not exist! ');
-        return
-    }
-    fs.writeFileSync(mtl_save_path, fs.readFileSync(mtl_path));
-}
 
 house_config.levels.forEach(function(level){
    let nodes = level.nodes;
