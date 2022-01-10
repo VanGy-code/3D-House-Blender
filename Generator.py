@@ -1,5 +1,3 @@
-
-
 import bpy
 import os
 import json
@@ -146,6 +144,6 @@ def add_model(model_file, model_id):
                     f"{model_file}\\{model_id}\\{filename}", scene=file, collection=myCol)
 
 
-clean()
+# clean()
 add_model(
     model_file='C:\\Project\\3D-House-Blender\\scenes', model_id='0f2bcc07-85c2-41a1-8712-cee71117aff6')
